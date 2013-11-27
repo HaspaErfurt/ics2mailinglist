@@ -6,7 +6,7 @@ ics2mailinglist
 Sends calendar dates to a mailing list
 
 """
-cal_link     = 'http://www.google.com/calendar/ical/2eskb61g20prl65k2qd01uktis%40group.calendar.google.com/public/basic.ics'
+cal_file     = 'CALENDAR_ICS_URL'
 mail_from    = 'Weekly Event Notifier <SENDER_MAIL_HERE>'
 mail_to      = 'LIST_MAIL_HERE'
 mail_subject = 'Weekly event notifier'
@@ -22,7 +22,7 @@ from urllib         import urlopen
 import pytz
 import smtplib
 
-f     = urlopen(cal_link)
+f     = urlopen(cal_file)
 cal   = Calendar.from_ical(f.read())
 mail  = ("From: %s\r\nTo: %s\r\nSubject: %s\r\n\r\n" 
          % (mail_from, mail_to, mail_subject))

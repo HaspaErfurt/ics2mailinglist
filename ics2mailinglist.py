@@ -35,8 +35,8 @@ for ev in cal.walk():
     if ev.name == 'VEVENT':
         # Check the start and end dates of the event
         if len(str(vDDDTypes.from_ical(ev.get('dtstart'))).split(' ')) > 1:
-            start = vDDDTypes.from_ical(ev.get('dtstart')).replace(tzinfo=pytz.utc)
-            end   = vDDDTypes.from_ical(ev.get('dtend')).replace(tzinfo=pytz.utc)
+            start = vDDDTypes.from_ical(ev.get('dtstart')).replace(tzinfo=utc)
+            end   = vDDDTypes.from_ical(ev.get('dtend')).replace(tzinfo=utc)
             if start < now or start > nweek:
                 continue
         else:

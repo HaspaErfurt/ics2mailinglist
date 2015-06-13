@@ -1,3 +1,5 @@
 calendar.ics
 config.py
+__pycache__/
+*.pyc
 *.swp

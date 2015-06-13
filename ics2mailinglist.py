@@ -6,14 +6,7 @@ ics2mailinglist
 Sends calendar dates to a mailing list
 
 """
-cal_file     = 'CALENDAR_ICS_URL'
-mail_from    = 'Weekly Event Notifier <SENDER_MAIL_HERE>'
-mail_to      = 'LIST_MAIL_HERE'
-mail_subject = 'Weekly event notifier'
-smtp_user    = 'SMTP_USER_HERE'
-smtp_pass    = 'SMPT_PASS_HERE'
-smtp_server  = 'SMTP_SERVER_HERE'
-
+from config import *
 from icalendar      import Calendar, Event
 from icalendar.prop import vDDDTypes
 from datetime       import *

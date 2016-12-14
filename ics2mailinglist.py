@@ -56,9 +56,9 @@ for ev in cal.walk():
 
 # Send mail via SMTP
 if smtp_ssl:
-	server = smtplib.SMTP_SSL(host=smtp_server)
+    server = smtplib.SMTP_SSL(host=smtp_server)
 else:
-	server = smtplib.SMTP(host=smtp_server)
+    server = smtplib.SMTP(host=smtp_server)
 	
 server.login(smtp_user, smtp_pass)
 server.sendmail(mail_from, mail_to, mail)
